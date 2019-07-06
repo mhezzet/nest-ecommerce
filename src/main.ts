@@ -5,6 +5,7 @@ import * as config from 'config';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.setGlobalPrefix('api');
   await app.listen(config.get('PORT'));
 }
 bootstrap();

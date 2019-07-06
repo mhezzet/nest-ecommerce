@@ -4,7 +4,7 @@ export const OrderSchema = new mongoose.Schema(
   {
     owner: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'user',
+      ref: 'User',
     },
     totalPrice: {
       type: Number,
@@ -14,7 +14,7 @@ export const OrderSchema = new mongoose.Schema(
       {
         product: {
           type: mongoose.Schema.Types.ObjectId,
-          ref: 'product',
+          ref: 'Product',
         },
         quantity: {
           type: Number,

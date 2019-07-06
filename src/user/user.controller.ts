@@ -9,12 +9,6 @@ import { SellerGuard } from './seller.guard';
 export class UserController {
   constructor(private userService: UserService) {}
 
-  @Get()
-  @UseGuards(AuthGuard('jwt'), SellerGuard)
-  tempAuth(@User() user) {
-    return { auth: 'works', user };
-  }
-
   @Post('login')
   async login(@Body() userDTO: LoginDTO) {
     const user = await this.userService.findByLogin(userDTO);
