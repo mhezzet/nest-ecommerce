@@ -4,6 +4,8 @@ import { UserModule } from './user/user.module';
 import { OrderModule } from './order/order.module';
 import { ProductModule } from './product/product.module';
 import * as config from 'config';
+import { APP_FILTER } from '@nestjs/core';
+import { HttpExceptionFilter } from './shared/http-exception.filter';
 
 @Module({
   imports: [
@@ -19,6 +21,11 @@ import * as config from 'config';
     ProductModule,
   ],
   controllers: [],
-  providers: [],
+  providers: [
+    {
+      provide: APP_FILTER,
+      useClass: HttpExceptionFilter,
+    },
+  ],
 })
 export class AppModule {}

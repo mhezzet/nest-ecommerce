@@ -1,5 +1,6 @@
 {
   "ENV": "NODE_ENV",
   "DB_URI": "DB_URI",
-  "PORT": "PORT"
+  "PORT": "PORT",
+  "JWT_SECRET": "JWT_SECRET"
 }
