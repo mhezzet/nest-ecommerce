@@ -1,0 +1,5 @@
+{
+  "ENV": "NODE_ENV",
+  "DB_URI": "DB_URI",
+  "PORT": "PORT"
+}
