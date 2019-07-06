@@ -1,5 +1,8 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
+import { UserModule } from './user/user.module';
+import { OrderModule } from './order/order.module';
+import { ProductModule } from './product/product.module';
 import * as config from 'config';
 
 @Module({
@@ -11,6 +14,9 @@ import * as config from 'config';
         useNewUrlParser: true,
       }),
     ),
+    UserModule,
+    OrderModule,
+    ProductModule,
   ],
   controllers: [],
   providers: [],
